@@ -8,6 +8,7 @@ toc_footers:
   - Copyright © 2021 - <a href='canarybit.eu'>CanaryBit AB</a>
 
 includes:
+  - enclaves
   - errors
 
 search: true
@@ -18,7 +19,7 @@ code_clipboard: false
 
 # Introduction
 
-Welcome to the ConfidentialCloud API! 
+Welcome to the ConfidentialCloud API!
 
 You can use our API to access ConfidentialCloud API endpoints, which can ...
 
@@ -41,66 +42,3 @@ curl "api_endpoint_here" \
 <aside class="notice">
 You must replace <code><api_key></code> with your personal API key.
 </aside>
-
-# Enclaves
-
-## Get all Enclaves
-
-This endpoint retrieves all Enclaves.
-
-```shell
-curl "<%= config[:api_url] %>/enclaves"
-```
-
-### HTTP Request
-
-`GET <%= config[:api_url] %>/enclaves`
-
-### Query Parameters
-
-Parameter | Default | Description
---------- | ------- | -----------
-
-<aside class="success">
-Note:
-</aside>
-
-## Get a specific Enclave
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-```shell
-curl "<%= config[:api_url] %>/enclave/2"
-```
-
-### HTTP Request
-
-`GET <%= config[:api_url] %>/enclave/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the Enclave to retrieve
-
-## Delete a specific Enclave
-
-This endpoint deletes a specific **Enclave**
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
-
-```shell
-curl "<%= config[:api_url] %>/enclave/2" \
-  -X DELETE 
-```

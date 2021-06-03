@@ -1,0 +1,62 @@
+# Enclaves
+
+## Get all Enclaves
+
+This endpoint retrieves all Enclaves.
+
+```shell
+curl "<%= config[:api_url] %>/enclaves"
+```
+
+### HTTP Request
+
+`GET <%= config[:api_url] %>/enclaves`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+
+<aside class="success">
+Note:
+</aside>
+
+## Get a specific Enclave
+
+This endpoint retrieves a specific kitten.
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+
+```shell
+curl "<%= config[:api_url] %>/enclave/2"
+```
+
+### HTTP Request
+
+`GET <%= config[:api_url] %>/enclave/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the Enclave to retrieve
+
+## Delete a specific Enclave
+
+This endpoint deletes a specific **Enclave**
+
+### HTTP Request
+
+`DELETE http://example.com/kittens/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to delete
+
+
+```shell
+curl "<%= config[:api_url] %>/enclave/2" \
+  -X DELETE
+```

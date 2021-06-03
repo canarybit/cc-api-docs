@@ -63,5 +63,5 @@ helpers do
 end
 
 # Global Variables
-set :api_url, 'https://confidentialcloud.io/api/v1'
+set :api_url, 'https://api.confidentialcloud.io/v1'
 config[:api_url]

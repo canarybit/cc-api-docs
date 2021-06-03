@@ -411,8 +411,8 @@ curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 <h1 id='enclave'>Enclave</h1><h2 id='list'>List</h2>
-<p>curl [api_url]</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="o">[</span>api_url]<span class="s2">"/enclave/"</span> 
+<p>curl &lt;%= config[:api_url] %&gt;</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl &lt;%<span class="o">=</span> config[:api_url] %&gt;<span class="s2">"/enclave/"</span> 
 </code></pre></div><h2 id='create'>Create</h2><h2 id='destroy'>Destroy</h2><h2 id='stats'>Stats</h2><h1 id='attestation'>Attestation</h1><h2 id='get'>Get</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"[api_url]/attestation"</span> 
 </code></pre></div><h2 id='list-2'>List</h2><h3 id='verify'>Verify</h3><h1 id='model'>Model</h1><h2 id='upload'>Upload</h2><h1 id='data'>Data</h1><h2 id='upload-2'>Upload</h2><h1 id='kittens-template'>Kittens (Template)</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>

@@ -16,8 +16,6 @@ code_clipboard: true
 
 ---
 
-[api_url]: https://confidentialcloud.io/v1
-
 # Introduction
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
@@ -55,7 +53,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 curl [api_url]
 
 ```shell
-curl [api_url]"/enclave/" 
+curl <%= config[:api_url] %>"/enclave/" 
 ```
 
 ## Create

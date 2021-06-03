@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - Copyright © 2021 <a href='canarybit.eu'>CanaryBit</a> | Made for 🇪🇺
+  - Copyright © 2021 - <a href='canarybit.eu'>CanaryBit AB</a>
 
 includes:
   - errors

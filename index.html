@@ -349,15 +349,15 @@
 <aside class="notice">
 You must replace <code><api_key></code> with your personal API key.
 </aside>
-<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2>
+<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
+</code></pre></div>
 <p>This endpoint retrieves all Enclaves.</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
-</code></pre></div><h3 id='http-request'>HTTP Request</h3>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/enclaves</code></p>
-<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2>
+<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
+</code></pre></div>
 <p>This endpoint retrieves a specific kitten.</p>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
-</code></pre></div><h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/enclave/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
@@ -371,7 +371,9 @@ You must replace <code><api_key></code> with your personal API key.
 <td>The ID of the Enclave to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2>
+<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
+</code></pre></div>
 <p>This endpoint deletes a specific <strong>Enclave</strong></p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
@@ -387,9 +389,7 @@ You must replace <code><api_key></code> with your personal API key.
 <td>The ID of the kitten to delete</td>
 </tr>
 </tbody></table>
-<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE
-</code></pre></div>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">

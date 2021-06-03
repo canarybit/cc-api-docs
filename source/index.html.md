@@ -13,6 +13,9 @@ includes:
 search: true
 
 code_clipboard: true
+
+[api_url]: https://confidentialcloud.io/v1
+
 ---
 
 # Introduction
@@ -22,8 +25,6 @@ Welcome to the Kittn API! You can use our API to access Kittn API endpoints, whi
 We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
-
-[api_url]: https://confidentialcloud.io/v1
 
 # Authentication
 
@@ -47,7 +48,7 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Enclave Creation
+# Enclave
 
 ## List
 
@@ -72,6 +73,15 @@ curl "[api_url]/attestation"
 ## List
 
 ### Verify
+
+
+# Model
+
+## Upload
+
+# Data
+
+## Upload
 
 
 # Kittens (Template)

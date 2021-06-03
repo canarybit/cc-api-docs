@@ -337,20 +337,20 @@
 <p>Welcome to the <a href="http://confidentialcloud.io" target="_blank">ConfidentialCloud</a> API!</p>
 
 <p>You can use our API to access all public ConfidentialCloud API endpoints.</p>
-<h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1" \
-  -H "Authorization: &lt;YOU_API_KEY&gt;"
+<h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;YOU_API_KEY&gt;"</span>
 </code></pre></div>
 <p>ConfidentialCloud uses API keys to allow access to the API. You can register a new API key at our developer portal.</p>
 
 <p>ConfidentialCloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
-<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclaves"
+<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
 </code></pre></div>
 <p>This endpoint retrieves all Enclaves.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/enclaves</code></p>
-<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclave/2"
+<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
 </code></pre></div>
 <p>This endpoint retrieves a specific Enclave.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
@@ -367,8 +367,8 @@
 <td>The ID of the Enclave to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclave/2" \
-  -X DELETE
+<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span> <span class="se">\</span>
+  <span class="nt">-X</span> DELETE
 </code></pre></div>
 <p>This endpoint deletes a specific Enclave.</p>
 <h3 id='http-request-3'>HTTP Request</h3>

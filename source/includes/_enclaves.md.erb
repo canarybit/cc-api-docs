@@ -2,7 +2,7 @@
 
 ## Get all Enclaves
 
-```
+```shell
 curl "<%= config[:api_url] %>/enclaves"
 ```
 
@@ -14,7 +14,7 @@ This endpoint retrieves all Enclaves.
 
 ## Get a specific Enclave
 
-```
+```shell
 curl "<%= config[:api_url] %>/enclave/2"
 ```
 
@@ -32,7 +32,7 @@ ID | The ID of the Enclave to retrieve
 
 ## Delete a specific Enclave
 
-```
+```shell
 curl "<%= config[:api_url] %>/enclave/2" \
   -X DELETE
 ```

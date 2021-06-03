@@ -338,17 +338,13 @@
 
 <p>You can use our API to access all public ConfidentialCloud API endpoints.</p>
 <h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;your_api_key&gt;"</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;YOU_API_KEY&gt;"</span>
 </code></pre></div>
 <p>ConfidentialCloud uses API keys to allow access to the API. You can register a new API key at our developer portal.</p>
 
 <p>ConfidentialCloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: &lt;your_api_key&gt;</code></p>
-
-<aside class="notice">
-You must replace `<api_key>` with your personal API key.
-</aside>
+<p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
 <h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
 </code></pre></div>
 <p>This endpoint retrieves all Enclaves.</p>

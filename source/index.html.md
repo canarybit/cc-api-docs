@@ -14,7 +14,7 @@ search: true
 
 code_clipboard: true
 
-[api_url]: https://confidentialcloud.io/v1
+[api_url]:"https://confidentialcloud.io/v1"
 
 ---
 

@@ -339,27 +339,18 @@
 <p>You can use our API to access ConfidentialCloud API endpoints.</p>
 
 <p>You can view code examples in the dark area to the right.</p>
-<h1 id='authentication'>Authentication</h1>
+<h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;your_api_key&gt;"</span>
+</code></pre></div>
 <p>ConfidentialCloud uses API keys to allow access to the API. You can register a new API key at our developer portal.</p>
 
 <p>ConfidentialCloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
-<p><code>Authorization: abcdefghijklmnopqrstuvwxyz</code></p>
+<p><code>Authorization: &lt;your_api_key&gt;</code></p>
 
 <aside class="notice">
 You must replace <code><api_key></code> with your personal API key.
 </aside>
-
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"https://api.confidentialcloud.io/v1"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: abcdefghijklmnopqrstuvwxyz"</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>abcdefghijklmnopqrstuvwxyz</code> with your API key.</p>
-</blockquote>
 <h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2>
 <p>This endpoint retrieves all Enclaves.</p>
 <div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>

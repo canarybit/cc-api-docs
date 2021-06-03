@@ -14,7 +14,7 @@ search: true
 
 code_clipboard: true
 
-[api_url]:"https://confidentialcloud.io/v1"
+[api_url]: https://confidentialcloud.io/v1
 
 ---
 
@@ -51,6 +51,8 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 # Enclave
 
 ## List
+
+curl [api_url]
 
 ```shell
 curl [api_url]"/enclave/" 

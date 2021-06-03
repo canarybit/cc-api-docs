@@ -53,7 +53,7 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 ## List
 
 ```shell
-curl "[api_url]/enclave/" 
+curl [api_url]"/enclave/" 
 ```
 
 ## Create

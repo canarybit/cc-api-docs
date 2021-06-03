@@ -288,7 +288,7 @@
 
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;]">
+  <body class="index" data-languages="[&quot;console&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -298,7 +298,7 @@
     <div class="toc-wrapper">
       <img src="images/logo-e10244c4.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="console">console</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -337,22 +337,22 @@
 <p>Welcome to the <a href="http://confidentialcloud.io" target="_blank">ConfidentialCloud</a> API!</p>
 
 <p>You can use our API to access all public ConfidentialCloud API endpoints.</p>
-<h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: &lt;YOU_API_KEY&gt;"</span>
+<h1 id='authentication'>Authentication</h1><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1" \
+  -H "Authorization: &lt;YOU_API_KEY&gt;"
 </code></pre></div>
 <p>ConfidentialCloud uses API keys to allow access to the API. You can register a new API key at our developer portal.</p>
 
 <p>ConfidentialCloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
-<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
+<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclaves"
 </code></pre></div>
 <p>This endpoint retrieves all Enclaves.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/enclaves</code></p>
-<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
+<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclave/2"
 </code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>This endpoint retrieves a specific Enclave.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/enclave/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
@@ -367,12 +367,12 @@
 <td>The ID of the Enclave to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE
+<h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight plaintext"><code>curl "https://api.confidentialcloud.io/v1/enclave/2" \
+  -X DELETE
 </code></pre></div>
-<p>This endpoint deletes a specific <strong>Enclave</strong></p>
+<p>This endpoint deletes a specific Enclave.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code>DELETE https://api.confidentialcloud.io/v1/enclave/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -382,14 +382,14 @@
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>The ID of the Enclave to delete</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="console">console</a>
           </div>
       </div>
     </div>

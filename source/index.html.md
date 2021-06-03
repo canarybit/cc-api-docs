@@ -9,6 +9,7 @@ toc_footers:
 
 includes:
   - errors
+  - variables.md.erb
 
 search: true
 
@@ -50,10 +51,11 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 ## List
 
-curl [api_url]
+curl <%= config[:api_url] %>
+
 
 ```shell
-curl [api_url]"/enclave/" 
+curl <%= config[:api_url] %>"/enclave/" 
 ```
 
 ## Create

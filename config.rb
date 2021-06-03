@@ -61,3 +61,7 @@ set :port, 4567
 helpers do
   require './lib/toc_data.rb'
 end
+
+# Global Variables
+set :api_url, 'https://confidentialcloud.io/v1'
+config[:api_url]

@@ -23,32 +23,16 @@ We have language bindings in Shell, Ruby, Python, and JavaScript! You can view c
 
 This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
 
+[api_url]: https://confidentialcloud.io/v1
+
 # Authentication
 
 > To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here" \
   -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
@@ -63,23 +47,36 @@ Kittn expects for the API key to be included in all API requests to the server i
 You must replace <code>meowmeowmeow</code> with your personal API key.
 </aside>
 
-# Kittens
+# Enclave Creation
+
+## List
+
+```shell
+curl "[api_url]/enclave/" 
+```
+
+## Create
+
+## Destroy
+
+## Stats 
+
+# Attestation
+
+## Get
+
+```shell
+curl "[api_url]/attestation" 
+```
+
+## List
+
+### Verify
+
+
+# Kittens (Template)
 
 ## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
 
 ```shell
 curl "http://example.com/api/kittens" \

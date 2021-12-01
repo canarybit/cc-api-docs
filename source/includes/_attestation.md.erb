@@ -1,0 +1,40 @@
+# Attestation
+
+## Show attestation info
+
+```shell
+curl "<%= config[:api_url] %>/attestations/2"
+```
+
+This endpoint shows enclave attestation results by its enclaveID.
+
+### HTTPS Request
+
+`GET <%= config[:api_url] %>/attestations/<enclaveID>`
+
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+enclaveID | The ID of the enclave to retrieve
+
+
+## Re-attest
+
+```shell
+curl "<%= config[:api_url] %>/attestations/2/run"
+```
+
+Re-run attestation of the enclave corresponding to enclaveID, return attestation result
+
+
+### HTTPS Request
+
+`GET <%= config[:api_url] %>/attestations/<enclaveID/run>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+enclaveID | The ID of the enclave to retrieve

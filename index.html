@@ -315,13 +315,19 @@
             <a href="#enclaves" class="toc-h1 toc-link" data-title="Enclaves">Enclaves</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-enclaves" class="toc-h2 toc-link" data-title="Get all Enclaves">Get all Enclaves</a>
+                    <a href="#list-all-enclaves" class="toc-h2 toc-link" data-title="List all enclaves">List all enclaves</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-enclave" class="toc-h2 toc-link" data-title="Get a specific Enclave">Get a specific Enclave</a>
+                    <a href="#create-a-new-enclave" class="toc-h2 toc-link" data-title="Create a new enclave">Create a new enclave</a>
+                  </li>
+                  <li>
+                    <a href="#list-a-specific-enclave" class="toc-h2 toc-link" data-title="List a specific enclave">List a specific enclave</a>
                   </li>
                   <li>
                     <a href="#delete-a-specific-enclave" class="toc-h2 toc-link" data-title="Delete a specific Enclave">Delete a specific Enclave</a>
+                  </li>
+                  <li>
+                    <a href="#shows-enclave-stats-by-enclaveid" class="toc-h2 toc-link" data-title="Shows enclave stats by enclaveID">Shows enclave stats by enclaveID</a>
                   </li>
               </ul>
           </li>
@@ -345,16 +351,22 @@
 <p>Confidential Cloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
-<h1 id='enclaves'>Enclaves</h1><h2 id='get-all-enclaves'>Get all Enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves"</span>
+<h1 id='enclaves'>Enclaves</h1><h2 id='list-all-enclaves'>List all enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves/"</span>
 </code></pre></div>
-<p>This endpoint retrieves all Enclaves.</p>
+<p>This endpoint lists all enclaves.</p>
 <h3 id='https-request'>HTTPS Request</h3>
-<p><code>GET https://api.confidentialcloud.io/v1/enclaves</code></p>
-<h2 id='get-a-specific-enclave'>Get a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
+<p><code>GET https://api.confidentialcloud.io/v1/enclaves/</code></p>
+<h2 id='create-a-new-enclave'>Create a new enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves/"</span> <span class="se">\</span>
+<span class="nt">-X</span> POST
 </code></pre></div>
-<p>This endpoint retrieves a specific Enclave.</p>
+<p>This endpoint creates a new enclave.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
-<p><code>GET https://api.confidentialcloud.io/v1/enclave/&lt;ID&gt;</code></p>
+<p><code>POST https://api.confidentialcloud.io/v1/enclaves/</code></p>
+<h2 id='list-a-specific-enclave'>List a specific enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span>
+</code></pre></div>
+<p>This endpoint lists an enclave by its enclaveID.</p>
+<h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/enclave/&lt;enclaveID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -363,16 +375,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the Enclave to retrieve</td>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
 </tr>
 </tbody></table>
 <h2 id='delete-a-specific-enclave'>Delete a specific Enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2"</span> <span class="se">\</span>
   <span class="nt">-X</span> DELETE
 </code></pre></div>
 <p>This endpoint deletes a specific Enclave.</p>
-<h3 id='https-request-3'>HTTPS Request</h3>
-<p><code>DELETE https://api.confidentialcloud.io/v1/enclave/&lt;ID&gt;</code></p>
+<h3 id='https-request-4'>HTTPS Request</h3>
+<p><code>DELETE https://api.confidentialcloud.io/v1/enclave/&lt;enclaveID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -381,8 +393,25 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the Enclave to delete</td>
+<td>enclaveID</td>
+<td>The ID of the enclave to delete</td>
+</tr>
+</tbody></table>
+<h2 id='shows-enclave-stats-by-enclaveid'>Shows enclave stats by enclaveID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclave/2/stats"</span>
+</code></pre></div>
+<p>This endpoint show enclave stats by its enclaveID.</p>
+<h3 id='https-request-5'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/enclave/&lt;enclaveID/stats&gt;</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
 </tr>
 </tbody></table>
 

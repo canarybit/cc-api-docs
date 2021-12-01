@@ -408,13 +408,13 @@
 <p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
 <h1 id='application'>Application</h1><h2 id='deploy-application-to-enclave-corresponding-to-enclaveid'>Deploy  application to enclave corresponding to enclaveID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/application/"</span>
 </code></pre></div>
-<p>Obtain info about the application posted to enclave corresponding to <enclaveID>.</p>
+<p>Obtain info about the application posted to enclave corresponding to enclaveID.</p>
 <h3 id='https-request'>HTTPS Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/application/</code></p>
 <h2 id='add-application'>Add application</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/application/2"</span> <span class="se">\</span>
 <span class="nt">-X</span> POST
 </code></pre></div>
-<p>Add an application to the enclave corresponding to <enclaveID></p>
+<p>Add an application to the enclave corresponding to enclaveID</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>POST https://api.confidentialcloud.io/v1/application/&lt;enclaveID&gt;</code></p>
 
@@ -487,7 +487,7 @@
 <h2 id='deploy-data-to-enclave'>Deploy data to enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/data/2"</span> <span class="se">\</span>
 <span class="nt">-X</span> POST
 </code></pre></div>
-<p>Send data to enclave identified by <enclaveID>.</p>
+<p>Send data to enclave identified by enclaveID.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>POST https://api.confidentialcloud.io/v1/data/&lt;enclaveID&gt;</code></p>
 
@@ -588,12 +588,12 @@
 </tbody></table>
 <h1 id='secrets'>Secrets</h1><h2 id='list-all-shared-information-tokens'>List all shared information tokens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/"</span>
 </code></pre></div>
-<p>Shows all <enclaveID> and <public Key> shared to and from user with a third party.</p>
+<p>Shows all enclaveID and publicKey shared to and from user with a third party.</p>
 <h3 id='https-request'>HTTPS Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/secrets/</code></p>
 <h2 id='show-per-enclave-shared-information-tokens'>Show per-enclave shared information tokens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/2/3"</span>
 </code></pre></div>
-<p>Shows all <enclaveID> and <public Key> shared to and from user with a third party.</p>
+<p>Shows all enclaveID and publicKey shared to and from user with a third party.</p>
 <h3 id='https-request-2'>HTTPS Request</h3>
 <p><code>GET https://api.confidentialcloud.io/v1/secrets/&lt;userID&gt;/&lt;enclaveID&gt;</code></p>
 
@@ -617,8 +617,8 @@
 <h2 id='share-infromation-tokens-with-user-identified-by'>Share infromation tokens with user identified by <userID></h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/2/3"</span> <span class="se">\</span>
 <span class="nt">-X</span> POST
 </code></pre></div>
-<p>This POST request shares <enclaveID> and <publicKey> with the user identified by
-<userID></p>
+<p>This POST request shares enclaveID and publicKey with the user identified by
+userID.</p>
 <h3 id='https-request-3'>HTTPS Request</h3>
 <p><code>POST https://api.confidentialcloud.io/v1/enclaves/&lt;userID&gt;/&lt;enclaveID&gt;</code></p>
 

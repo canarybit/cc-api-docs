@@ -312,6 +312,39 @@
             <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
           </li>
           <li>
+            <a href="#application" class="toc-h1 toc-link" data-title="Application">Application</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#deploy-application-to-enclave-corresponding-to-enclaveid" class="toc-h2 toc-link" data-title="Deploy  application to enclave corresponding to enclaveID">Deploy  application to enclave corresponding to enclaveID</a>
+                  </li>
+                  <li>
+                    <a href="#add-application" class="toc-h2 toc-link" data-title="Add application">Add application</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#attestation" class="toc-h1 toc-link" data-title="Attestation">Attestation</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#show-attestation-info" class="toc-h2 toc-link" data-title="Show attestation info">Show attestation info</a>
+                  </li>
+                  <li>
+                    <a href="#re-attest" class="toc-h2 toc-link" data-title="Re-attest">Re-attest</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#data" class="toc-h1 toc-link" data-title="Data">Data</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#obtain-data-information" class="toc-h2 toc-link" data-title="Obtain data information">Obtain data information</a>
+                  </li>
+                  <li>
+                    <a href="#deploy-data-to-enclave" class="toc-h2 toc-link" data-title="Deploy data to enclave">Deploy data to enclave</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#enclaves" class="toc-h1 toc-link" data-title="Enclaves">Enclaves</a>
               <ul class="toc-list-h2">
                   <li>
@@ -328,6 +361,28 @@
                   </li>
                   <li>
                     <a href="#shows-enclave-stats-by-enclaveid" class="toc-h2 toc-link" data-title="Shows enclave stats by enclaveID">Shows enclave stats by enclaveID</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#results" class="toc-h1 toc-link" data-title="Results">Results</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#retrieve-results" class="toc-h2 toc-link" data-title="Retrieve results">Retrieve results</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#secrets" class="toc-h1 toc-link" data-title="Secrets">Secrets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#list-all-shared-information-tokens" class="toc-h2 toc-link" data-title="List all shared information tokens">List all shared information tokens</a>
+                  </li>
+                  <li>
+                    <a href="#show-per-enclave-shared-information-tokens" class="toc-h2 toc-link" data-title="Show per-enclave shared information tokens">Show per-enclave shared information tokens</a>
+                  </li>
+                  <li>
+                    <a href="#share-infromation-tokens-with-user-identified-by" class="toc-h2 toc-link" data-title="Share infromation tokens with user identified by ">Share infromation tokens with user identified by <userid></userid></a>
                   </li>
               </ul>
           </li>
@@ -351,6 +406,104 @@
 <p>Confidential Cloud expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
 
 <p><code>Authorization: &lt;YOU_API_KEY&gt;</code></p>
+<h1 id='application'>Application</h1><h2 id='deploy-application-to-enclave-corresponding-to-enclaveid'>Deploy  application to enclave corresponding to enclaveID</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/application/"</span>
+</code></pre></div>
+<p>Obtain info about the application posted to enclave corresponding to <enclaveID>.</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/application/</code></p>
+<h2 id='add-application'>Add application</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/application/2"</span> <span class="se">\</span>
+<span class="nt">-X</span> POST
+</code></pre></div>
+<p>Add an application to the enclave corresponding to <enclaveID></p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>POST https://api.confidentialcloud.io/v1/application/&lt;enclaveID&gt;</code></p>
+
+<p>### URL Parameters</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='attestation'>Attestation</h1><h2 id='show-attestation-info'>Show attestation info</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/attestations/2"</span>
+</code></pre></div>
+<p>This endpoint shows enclave attestation results by its enclaveID.</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/attestations/&lt;enclaveID&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='re-attest'>Re-attest</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/attestations/2/run"</span>
+</code></pre></div>
+<p>Re-run attestation of the enclave corresponding to enclaveID, return attestation result</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/attestations/&lt;enclaveID/run&gt;</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='data'>Data</h1><h2 id='obtain-data-information'>Obtain data information</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/data/2"</span>
+</code></pre></div>
+<p>Get info about volume of data posted to the enclave corresponding to enclaveID</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/data/&lt;enclaveID&gt;</code></p>
+
+<p>### URL Parameters</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='deploy-data-to-enclave'>Deploy data to enclave</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/data/2"</span> <span class="se">\</span>
+<span class="nt">-X</span> POST
+</code></pre></div>
+<p>Send data to enclave identified by <enclaveID>.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>POST https://api.confidentialcloud.io/v1/data/&lt;enclaveID&gt;</code></p>
+
+<p>### URL Parameters</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
 <h1 id='enclaves'>Enclaves</h1><h2 id='list-all-enclaves'>List all enclaves</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/enclaves/"</span>
 </code></pre></div>
 <p>This endpoint lists all enclaves.</p>
@@ -414,6 +567,60 @@
 <td>The ID of the enclave to retrieve</td>
 </tr>
 </tbody></table>
+<h1 id='results'>Results</h1><h2 id='retrieve-results'>Retrieve results</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/results/2"</span>
+</code></pre></div>
+<p>Retrieve final results by <enclaveID></p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/results/&lt;enclaveID&gt;</code></p>
+
+<p>### URL Parameters</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h1 id='secrets'>Secrets</h1><h2 id='list-all-shared-information-tokens'>List all shared information tokens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/"</span>
+</code></pre></div>
+<p>Shows all <enclaveID> and <public Key> shared to and from user with a third party.</p>
+<h3 id='https-request'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/secrets/</code></p>
+<h2 id='show-per-enclave-shared-information-tokens'>Show per-enclave shared information tokens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/2/3"</span>
+</code></pre></div>
+<p>Shows all <enclaveID> and <public Key> shared to and from user with a third party.</p>
+<h3 id='https-request-2'>HTTPS Request</h3>
+<p><code>GET https://api.confidentialcloud.io/v1/secrets/&lt;userID&gt;/&lt;enclaveID&gt;</code></p>
+
+<p>### URL Parameters</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userID</td>
+<td>The ID of the user</td>
+</tr>
+<tr>
+<td>enclaveID</td>
+<td>The ID of the enclave to retrieve</td>
+</tr>
+</tbody></table>
+<h2 id='share-infromation-tokens-with-user-identified-by'>Share infromation tokens with user identified by <userID></h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.confidentialcloud.io/v1/secrets/2/3"</span> <span class="se">\</span>
+<span class="nt">-X</span> POST
+</code></pre></div>
+<p>This POST request shares <enclaveID> and <publicKey> with the user identified by
+<userID></p>
+<h3 id='https-request-3'>HTTPS Request</h3>
+<p><code>POST https://api.confidentialcloud.io/v1/enclaves/&lt;userID&gt;/&lt;enclaveID&gt;</code></p>
 
       </div>
       <div class="dark-box">

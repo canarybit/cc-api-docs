@@ -1,34 +1,49 @@
 # Enclaves
 
-## Get all Enclaves
+## List all enclaves
 
 ```shell
-curl "<%= config[:api_url] %>/enclaves"
+curl "<%= config[:api_url] %>/enclaves/"
 ```
 
-This endpoint retrieves all Enclaves.
+This endpoint lists all enclaves.
 
 ### HTTPS Request
 
-`GET <%= config[:api_url] %>/enclaves`
+`GET <%= config[:api_url] %>/enclaves/`
 
-## Get a specific Enclave
+## Create a new enclave
+
+```shell
+curl "<%= config[:api_url] %>/enclaves/" \
+-X POST
+```
+
+This endpoint creates a new enclave.
+
+### HTTPS Request
+
+`POST <%= config[:api_url] %>/enclaves/`
+
+
+## List a specific enclave
 
 ```shell
 curl "<%= config[:api_url] %>/enclave/2"
 ```
 
-This endpoint retrieves a specific Enclave.
+This endpoint lists an enclave by its enclaveID.
 
 ### HTTPS Request
 
-`GET <%= config[:api_url] %>/enclave/<ID>`
+`GET <%= config[:api_url] %>/enclave/<enclaveID>`
+
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the Enclave to retrieve
+enclaveID | The ID of the enclave to retrieve
 
 ## Delete a specific Enclave
 
@@ -41,10 +56,29 @@ This endpoint deletes a specific Enclave.
 
 ### HTTPS Request
 
-`DELETE <%= config[:api_url] %>/enclave/<ID>`
+`DELETE <%= config[:api_url] %>/enclave/<enclaveID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the Enclave to delete
+enclaveID | The ID of the enclave to delete
+
+## Shows enclave stats by enclaveID
+
+```shell
+curl "<%= config[:api_url] %>/enclave/2/stats"
+```
+
+This endpoint show enclave stats by its enclaveID.
+
+### HTTPS Request
+
+`GET <%= config[:api_url] %>/enclave/<enclaveID/stats>`
+
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+enclaveID | The ID of the enclave to retrieve

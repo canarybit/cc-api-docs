@@ -1,0 +1,32 @@
+# Application
+
+## Deploy  application to enclave corresponding to enclaveID
+
+```shell
+curl "<%= config[:api_url] %>/application/"
+```
+
+Obtain info about the application posted to enclave corresponding to <enclaveID>.
+
+### HTTPS Request
+
+`GET <%= config[:api_url] %>/application/`
+
+## Add application
+
+```shell
+curl "<%= config[:api_url] %>/application/2" \
+-X POST
+```
+
+Add an application to the enclave corresponding to <enclaveID>
+
+### HTTPS Request
+
+`POST <%= config[:api_url] %>/application/<enclaveID>`
+
+  ### URL Parameters
+
+  Parameter | Description
+  --------- | -----------
+  enclaveID | The ID of the enclave to retrieve
